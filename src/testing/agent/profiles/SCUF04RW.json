@@ -1,0 +1,38 @@
+[{
+	"id" : "SCUF04RW-GOOD",
+	"desc": "",
+	"repeat":"1000-20000",
+	"actions": [
+		{
+			"id":"SCUF04RW-GOOD",
+			"desc":"Valid Transactions",
+			"from":["0x46D47c3B2ccE9055Ff8609b4bFBBe5e983DdA6B0", "0x2f72D7d8e2Cb9C267BD3421ff3192C22FB8f56c2", "0x683768a70410Ab41FDAEe408a12a43B94bC3F596", "0x31E375F87dBF5B7972220597A5530318Df2B22d8"],
+			"to":"0x360f4565f5e16b20C53B92232A0164b829E0B2D4",
+			"functionName":"put()",
+			"functionArguments":[],
+			"value" : "100000-500000",
+			"whenTxSuccessful" : [],
+			"whenTxFailed" : [],
+			"whenTxReady": []
+		}
+	]
+},
+{
+	"id":"SCUF04RW-EVIL",
+	"desc": "",
+	"repeat":"60000",
+	"actions": [
+		{
+			"id":"SCUF04RW-EVIL",
+			"desc":"Attacker",
+			"from":["0xF4a1b781e42b92d6A044c6B49448Ce43eb00a01a"],
+			"to":"0x360f4565f5e16b20C53B92232A0164b829E0B2D4",
+			"functionName":"get(uint256)",
+			"functionArguments":["uint(100000)"],
+			"value" : "0",
+			"whenTxSuccessful" : [],
+			"whenTxFailed" : [],
+			"whenTxReady": []
+		}
+	]
+}]

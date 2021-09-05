@@ -1,0 +1,101 @@
+[
+	{
+		"id":"1",
+		"desc": "Good 1",
+		"mode" : "non-singleton",
+		"delay": 5000,
+		"actions": [
+			{
+				"id":"1.1",
+				"desc":"(Good) Account Bank Deposit",
+				"from":"0xd128dB64dB091700c07AADBed1C6f701543755fA",
+				"to":"0xbC7e1E690Fab8fe71ec23136f918895F0B0027cC",
+				"functionName":"deposit()",
+				"value": 10,
+				"functionArguments":[],
+				"whenTxSuccessful" : [
+					{
+						"id":"1.2",
+						"desc":"(Good) Account Bank Withdrawal",
+						"from":"0xd128dB64dB091700c07AADBed1C6f701543755fA",
+						"to":"0xbC7e1E690Fab8fe71ec23136f918895F0B0027cC",
+						"functionName":"withdraw(uint256)",
+						"value": 0,
+						"functionArguments":[{"type" : "RandomInt", "params" : {"min" : 1, "max" : 10}}],
+						"whenTxSuccessful" : [],
+						"whenTxFailed" : [],
+						"whenTxReady": []
+					}
+				],
+				"whenTxFailed" : [],
+				"whenTxReady": []
+			}
+		]
+	},
+	{
+		"id":"2",
+		"desc": "Good 2",
+		"mode": "non-singleton",		
+		"delay": 5000,
+		"actions": [
+			{
+				"id":"2.1",
+				"desc":"(Good) Company Bank Deposit",
+				"from":"0xd128dB64dB091700c07AADBed1C6f701543755fA",
+				"to":"0xdb200e2e7A125074B531f6D8F8888F0F982bfD3d",
+				"functionName":"internalLogicD()",
+				"value": 0,
+				"functionArguments":[],
+				"whenTxSuccessful" : [
+					{
+						"id":"2.2",
+						"desc":"(Good) Company Bank Withdrawal",
+						"from":"0xd128dB64dB091700c07AADBed1C6f701543755fA",
+						"to":"0xdb200e2e7A125074B531f6D8F8888F0F982bfD3d",
+						"functionName":"internalLogicW()",
+						"value": 0,
+						"functionArguments":[],
+						"whenTxSuccessful" : [],
+						"whenTxFailed" : [],
+						"whenTxReady": []
+					}
+				],
+				"whenTxFailed" : [],
+				"whenTxReady": []
+			}
+		]
+	},
+	{
+		"id":"3",
+		"desc": "Malicious Attack - Singleton.",
+		"delay": 5000,
+		"mode": "singleton",
+		"actions": [
+			{
+				"id":"3.1",
+				"desc":"(Bad) Company Bank Deposit",
+				"from":"0xd128dB64dB091700c07AADBed1C6f701543755fA",
+				"to":"0xdb200e2e7A125074B531f6D8F8888F0F982bfD3d",
+				"functionName":"internalLogicD()",
+				"value": "0",
+				"functionArguments":[],
+				"whenTxSuccessful" : [
+					{
+						"id":"3.2",
+						"desc":"(Good) Company Bank Withdrawal",
+						"from":"0xd128dB64dB091700c07AADBed1C6f701543755fA",
+						"to":"0xdb200e2e7A125074B531f6D8F8888F0F982bfD3d",
+						"functionName":"internalLogicW()",
+						"value": "0",
+						"functionArguments":[],
+						"whenTxSuccessful" : [],
+						"whenTxFailed" : [],
+						"whenTxReady": []
+					}
+				],
+				"whenTxFailed" : [],
+				"whenTxReady": []
+			}
+		]
+	}	
+]

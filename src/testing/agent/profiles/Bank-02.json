@@ -1,0 +1,155 @@
+[{
+	"id":"1",
+	"desc": "",
+	"repeat":"30000",
+	"actions": [
+		{
+			"id":"1.1",
+			"desc":"Account Bank Deposit",
+			"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+			"to":"0xbC7e1E690Fab8fe71ec23136f918895F0B0027cC",
+			"functionName":"deposit()",
+			"value": "10",
+			"functionArguments":[],
+			"whenTxSuccessful" : [
+				{
+							"id":"1.2",
+							"desc":"Account Bank Withdrawal",
+							"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+							"to":"0xbC7e1E690Fab8fe71ec23136f918895F0B0027cC",
+							"functionName":"withdraw(uint256)",
+							"value": "0",
+							"functionArguments":["uint(5)"],
+							"whenTxSuccessful" : [],
+							"whenTxFailed" : [],
+							"whenTxReady": []
+				}
+			],
+			"whenTxFailed" : [],
+			"whenTxReady": []
+		}
+	]
+},
+{
+	"id":"2",
+	"desc": "",
+	"repeat":"40000",
+	"actions": [
+		{
+			"id":"2.1",
+			"desc":"Company Bank Deposit",
+			"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+			"to":"0xdb200e2e7A125074B531f6D8F8888F0F982bfD3d",
+			"functionName":"internalLogicD()",
+			"value": "0",
+			"functionArguments":[],
+			"whenTxSuccessful" : [
+				{
+							"id":"2.2",
+							"desc":"Company Bank Withdrawal",
+							"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+							"to":"0xdb200e2e7A125074B531f6D8F8888F0F982bfD3d",
+							"functionName":"internalLogicW()",
+							"value": "0",
+							"functionArguments":[],
+							"whenTxSuccessful" : [],
+							"whenTxFailed" : [],
+							"whenTxReady": []
+				}
+			],
+			"whenTxFailed" : [],
+			"whenTxReady": []
+		}
+	]
+},
+{
+	"id":"3",
+	"desc": "",
+	"repeat":"60000",
+	"actions": [
+		{
+			"id":"3.1",
+			"desc":"Reentrancy (Part 1)",
+			"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+			"to":"0x31595ad95351EA874dB56Baf3524a3fcd31e1fD6",
+			"functionName":"callFirst()",
+			"value": "1",
+			"functionArguments":[],
+			"whenTxSuccessful" : [
+				{
+					"id":"3.2",
+					"desc":"Reentrancy (Part 2)",
+					"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+					"to":"0x31595ad95351EA874dB56Baf3524a3fcd31e1fD6",
+					"functionName":"callSecond()",
+					"value": "1",
+					"functionArguments":[],
+					"whenTxSuccessful" : [
+						{
+							"id":"3.3",
+							"desc":"Reentrancy (Reset)",
+							"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+							"to":"0x31595ad95351EA874dB56Baf3524a3fcd31e1fD6",
+							"functionName":"reset()",
+							"value": "1",
+							"functionArguments":[],
+							"whenTxSuccessful" : [],
+							"whenTxFailed" : [],
+							"whenTxReady": []
+						}
+					],
+					"whenTxFailed" : [],
+					"whenTxReady": []
+				}	
+			],
+			"whenTxFailed" : [],
+			"whenTxReady": []
+		}
+	]
+},
+{
+	"id":"4",
+	"desc": "",
+	"repeat":"120000",
+	"actions": [
+		{
+			"id":"4.1",
+			"desc":"Reentrancy (Part 1)",
+			"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+			"to":"0x88b4b778E69373873A5D862E28561c515f283bF8",
+			"functionName":"callFirst()",
+			"value": "1",
+			"functionArguments":[],
+			"whenTxSuccessful" : [
+				{
+					"id":"4.2",
+					"desc":"Reentrancy (Part 2)",
+					"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+					"to":"0x88b4b778E69373873A5D862E28561c515f283bF8",
+					"functionName":"callSecond()",
+					"value": "1",
+					"functionArguments":[],
+					"whenTxSuccessful" : [
+						{
+							"id":"4.3",
+							"desc":"Reentrancy (Reset)",
+							"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA"],
+							"to":"0x88b4b778E69373873A5D862E28561c515f283bF8",
+							"functionName":"reset()",
+							"value": "1",
+							"functionArguments":[],
+							"whenTxSuccessful" : [],
+							"whenTxFailed" : [],
+							"whenTxReady": []
+						}
+					],
+					"whenTxFailed" : [],
+					"whenTxReady": []
+				}	
+			],
+			"whenTxFailed" : [],
+			"whenTxReady": []
+		}
+	]
+}
+]

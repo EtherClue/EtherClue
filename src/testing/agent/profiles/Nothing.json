@@ -1,0 +1,21 @@
+
+
+[{
+	"id":"Nothing",
+	"desc": "",
+	"repeat":"1000",
+	"actions": [
+		{
+			"id":"Nothing",
+			"desc":"Attacker",
+			"from":["0x46D47c3B2ccE9055Ff8609b4bFBBe5e983DdA6B0"],
+			"to":"0x99462975c489Ed7080775b1256CA72bedD8918d9",
+			"functionName":"action()",
+			"functionArguments":[],
+			"value" : "1",
+			"whenTxSuccessful" : [],
+			"whenTxFailed" : [],
+			"whenTxReady": []
+		}
+	]
+}]

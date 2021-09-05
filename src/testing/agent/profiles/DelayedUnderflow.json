@@ -1,0 +1,31 @@
+[{
+	"id":"1",
+	"desc": "DelayedUnderflow",
+	"mode": "singelton",
+	"delay": 5000,
+	"actions": [
+		{
+			"id":"1.1",
+			"desc":"DelayedUnderflow (Set)",
+			"from":"0xd128dB64dB091700c07AADBed1C6f701543755fA",
+			"to":"0x04763C2A74CD2197936D60de1F22178971d98fb2",
+			"functionName":"trigger(uint256)",
+			"functionArguments": [{ "type" : "StepUp", "params" : {"startValue" : 5000, "increaseOp" : "*", "increaseValue" : "2", "untilValue" : 80000} }],
+			"whenTxSuccessful" : [
+				{
+					"id":"1.2",
+					"desc":"DelayedUnderflow (Reset)",
+					"from":"0xd128dB64dB091700c07AADBed1C6f701543755fA",
+					"to":"0x04763C2A74CD2197936D60de1F22178971d98fb2",
+					"functionName":"reset()",
+					"functionArguments":[],
+					"whenTxSuccessful" : [],
+					"whenTxFailed" : [],
+					"whenTxReady": []
+				}				
+			],
+			"whenTxFailed" : [],
+			"whenTxReady": []
+		}
+	]
+}]

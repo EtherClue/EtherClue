@@ -1,0 +1,21 @@
+[
+	{
+		"id":"1",
+		"desc": "",
+		"repeat":"2000",
+		"actions": [
+			{
+				"id":"1.1",
+				"desc":"Monarch War",
+				"from":["0xd128dB64dB091700c07AADBed1C6f701543755fA","0xDD967a4F6Fe5Fa45074f2819Bdc89c687bdc587b","0x6290361854a73914072A68CE6d1C445Eb6F9c307"],
+				"to":"0xa75C4E076a08403239bC2F39A40ffFCa6751e273",
+				"functionName":"claimThrone()",
+				"value": "0-1000000000",
+				"functionArguments":[],
+				"whenTxSuccessful" : [],
+				"whenTxFailed" : [],
+				"whenTxReady": []
+			}
+		]
+	}
+]
